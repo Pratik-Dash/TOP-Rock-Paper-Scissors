@@ -1,0 +1,185 @@
+:root{
+    --background:#f1ffe7;
+    --accent-color:#a9fdac;
+    --text:#363946;
+    --focus-color:#74fb78;
+}
+body{
+    background-color:var(--background);
+    color:var(--text);
+    text-align: center;
+    
+}
+.getName{
+    display: inline-block;
+   position: relative;
+   top: 200px;
+   
+}
+
+.begin{
+    
+    background-color: var(--accent-color);
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 0;
+    border-width: 0px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.begin:hover{
+    background-color: var(--focus-color);
+    transition: .7s;
+}
+#name{
+   
+   
+    background-color: var(--background);
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-width: 0px;
+    background-color: #DFFFD6;
+    text-align: center;
+    border: 1px solid transparent;
+    
+   
+}
+#name:focus{
+    border-color: #74fb78;
+    transition: 2s;
+}
+.player{
+    display: inline-block;
+    position: relative;
+    margin: 1rem;
+    height: 50%;
+    width: 45%;
+    left: 0px;
+    border: 3px solid var(--accent-color);
+    text-transform: uppercase;
+}
+.vsText{
+    
+    display: inline-block;
+    position: relative;
+  
+   font-size: x-large;
+   color: var(--text);
+    
+}
+.computer{
+    display: inline-block;
+    position: relative;
+    margin: 1rem;
+    height: 50%;
+    width: 45%;
+    left: 0px;
+    border: 3px solid var(--accent-color);
+    text-transform: uppercase;
+    
+}
+.btn-group{
+    padding: 2rem;
+}
+.weaponButton{
+    height: 120px;
+    margin: 5px;
+    width: 100px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    border: 1px solid var(--text);
+    color: var(--text);
+    font-size: 18px;
+    
+}
+@media only screen and (max-width: 600px){
+
+    .weaponButton{
+        height: 100px;
+        width: 80px;
+        cursor: pointer;
+    background-color: var(--accent-color);
+    border: 1px solid var(--text);
+    color: var(--text);
+    font-size: 14px;
+
+    }
+}
+
+@media only screen and (max-width: 600px){
+.player{
+    
+    
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 5px;
+    width: 100%;
+    height: 300px;
+}
+}
+@media only screen and (max-width: 600px){
+    .computer{
+
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 5px;
+        width: 100%;
+        height: 300px;
+    }
+}
+.score{
+    padding: 1rem;
+}
+.weaponButton:focus{
+
+    background-color: var(--focus-color);
+}
+.weaponButton:hover{
+
+    background-color: var(--focus-color);
+}
+.reset{
+
+    background-color: var(--accent-color);
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 0;
+    border-width: 0px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.reset:hover{
+
+    background-color: var(--focus-color);
+    transition: .7s;
+}
+.social{
+    list-style-type: none;
+    text-align: center;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+   
+   
+
+}
+.sociallinks{
+    display: inline;
+    padding: 1rem;
+    
+}
+.footer{
+     margin-top:150px ;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
