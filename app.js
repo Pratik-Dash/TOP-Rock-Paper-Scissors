@@ -8,6 +8,8 @@ const UIcomputerScore = document.querySelector(".computerScoreValue");
 const resultbox = document.querySelector(".resultBox");
 const gameStatus = document.createElement("h3");
 const nameInput = document.querySelector("#name");
+const nameDiv = document.querySelector(".getName");
+const errorText = document.querySelector(".errorText");
 const UIplayerName = document.querySelector(".playerName");
 const beginGameButton = document.querySelector(".begin");
 const gameBox= document.querySelector(".gameBox");
@@ -20,6 +22,7 @@ resultbox.appendChild(gameStatus);
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
+let playerName = ""
  function SetPlayerAndComputerScores(winnerOfRound){
     if(winnerOfRound === "Player"){
         playerScore++;
@@ -133,19 +136,29 @@ function resetGame(){
     round = 0;
     UIcomputerScore.innerText = 0;
     UIplayerScore.innerText = 0;
-    showGameUI();
+    showGameUI(playerName);
     resetBtn.style.display = "none";
    
 }
 resetBtn.addEventListener("click",resetGame);
-
-function showGameUI(){
+function validatePlayerName(playerName){
+    let player = nameInput.value;
+    if(player === ""){
+        errorText.innerText = "Please enter a name to continue..";
+        errorText.style.color = "red";
+    }
+    else{
+        showGameUI(player);
+    }
+}
+function showGameUI(player){
 
     gameBox.style.display = "block";
     beginGameButton.style.display = "none";
-    let playerName = nameInput.value;
+    playerName = player;
     UIplayerName.innerText = playerName+"'s";
     nameInput.style.display = "none";
+    errorText.style.display = "none";
     
 }
-beginGameButton.addEventListener("click",showGameUI);
+beginGameButton.addEventListener("click",validatePlayerName);
