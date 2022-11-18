@@ -88,7 +88,7 @@ function playRound(e){
              }
         else{
                 
-                gameStatus.innerText = "You lost this round."
+                gameStatus.innerText = `You lost, ${computerSelection} beats ${playerSelection}`
                 winnerOfRound = "Computer"
                 SetPlayerAndComputerScores(winnerOfRound);
                          
@@ -104,14 +104,13 @@ function updateRound(){
             finalResult.style.display = "block";
             finalResult.innerText = `Bravo, you won the game.`;
             gameBox.style.display = "none";
-            beginGameButton.innerText = "Play again?";
             resetBtn.style.display = "block";
             
 
         }
         else if(playerScore<computerScore){
             finalResult.style.display = "block"
-           finalResult.innerText = `Oh no! you lost try again.`;
+           finalResult.innerText = `Oh no! you lost. Try again?`;
            gameBox.style.display = "none";
            resetBtn.style.display = "block"
            
